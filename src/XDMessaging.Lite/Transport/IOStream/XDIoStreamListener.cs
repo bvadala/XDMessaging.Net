@@ -196,9 +196,9 @@ namespace XDMessaging.Transport.IOStream
             }
             catch (UnauthorizedAccessException ue)
             {
-                throw new UnauthorizedAccessException(
+                Log.Error(new UnauthorizedAccessException(
                     "Unable to bind to channel as access is denied." +
-                    $" Ensure the process has read/write access to the directory '{fullPath}'.", ue);
+                    $" Ensure the process has read/write access to the directory '{fullPath}'.", ue));
             }
             catch (IOException ie)
             {
