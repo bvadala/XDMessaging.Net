@@ -197,12 +197,18 @@ namespace XDMessaging.Transport.IOStream
         {
             Parallel.ForEach(Directory.EnumerateDirectories(TemporaryFolder, "*", SearchOption.TopDirectoryOnly), x =>
             {
-                var directory = new DirectoryInfo(x);
-                CleanUpMessages(directory, messageTimeoutInMilliseconds);
-                if (!directory.GetFiles("*.*").Any() && directory.LastAccessTime < DateTime.UtcNow.AddDays(-30))
+                try
                 {
-                    directory.Delete();
+                    var directory = new DirectoryInfo(x);
+                    CleanUpMessages(directory, messageTimeoutInMilliseconds);
+                    if (!directory.GetFiles("*.*").Any() && directory.LastAccessTime < DateTime.UtcNow.AddDays(-30))
+                    {
+                        directory.Delete();
+                    }
                 }
+                catch
+                {
+                }                
             });
         }
 
