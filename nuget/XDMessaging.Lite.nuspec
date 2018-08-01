@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
 	<metadata>
-		<id>XDMessaging.Lite</id>
-		<version>5.0.6</version>
+		<id>SB-XDMessaging.Lite</id>
+		<version>5.0.7</version>
 		<title>XDMessaging Lite Library</title>
 		<authors>TheCodeKing</authors>
 		<owners>TheCodeKing</owners>

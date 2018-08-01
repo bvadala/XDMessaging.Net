@@ -9,7 +9,3 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("5.0.6")]
 [assembly: ComVisible(false)]
 [assembly: Guid("6ca3fc60-ba34-46c0-8550-9a4aa3ce8340")]
-
-#if SIGNED
-[assembly: AssemblyKeyFile(@"..\..\..\..\..\thecodeking.snk")]
-#endif
